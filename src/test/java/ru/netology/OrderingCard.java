@@ -2,6 +2,7 @@ package ru.netology;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 
@@ -19,11 +20,14 @@ public class OrderingCard {
 
     LocalDate today =  LocalDate.now();
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
-
+@BeforeEach
+public void openForm() {
+    open("http://localhost:9999");
+}
     @Test
     void validityOfTheForm() {
-        Configuration.holdBrowserOpen = true;
-        open("http://localhost:9999");
+//        Configuration.holdBrowserOpen = true;
+//        open("http://localhost:9999");
         $("[data-test-id=\"city\"] .input__control").setValue("Москва");
         $("[data-test-id=\"date\"] [placeholder='Дата встречи']").doubleClick().sendKeys(Keys.DELETE);
         LocalDate futureDay = today.plusDays(4);
@@ -37,8 +41,8 @@ public class OrderingCard {
 
     @Test
     void checkingTelaphoneNumber() {
-        Configuration.holdBrowserOpen = true;
-        open("http://localhost:9999");
+//        Configuration.holdBrowserOpen = true;
+//        open("http://localhost:9999");
         $("[data-test-id=\"city\"] .input__control").setValue("Москва");
         $("[data-test-id=\"date\"] [placeholder='Дата встречи']").doubleClick().sendKeys(Keys.DELETE);
         LocalDate futureDay = today.plusDays(4);
@@ -52,8 +56,8 @@ public class OrderingCard {
 
     @Test
     void checkingFIO() {
-        Configuration.holdBrowserOpen = true;
-        open("http://localhost:9999");
+//        Configuration.holdBrowserOpen = true;
+//        open("http://localhost:9999");
         $("[data-test-id=\"city\"] .input__control").setValue("Москва");
         $("[data-test-id=\"date\"] [placeholder='Дата встречи']").doubleClick().sendKeys(Keys.DELETE);
         LocalDate futureDay = today.plusDays(4);
@@ -67,8 +71,8 @@ public class OrderingCard {
 
     @Test
     void checkingCity() {
-        Configuration.holdBrowserOpen = true;
-        open("http://localhost:9999");
+//        Configuration.holdBrowserOpen = true;
+//        open("http://localhost:9999");
         $("[data-test-id=\"city\"] .input__control").setValue("Moskva");
         $("[data-test-id=\"date\"] [placeholder='Дата встречи']").doubleClick().sendKeys(Keys.DELETE);
         LocalDate futureDay = today.plusDays(4);
@@ -82,8 +86,8 @@ public class OrderingCard {
 
     @Test
     void checkingDate() {
-        Configuration.holdBrowserOpen = true;
-        open("http://localhost:9999");
+//        Configuration.holdBrowserOpen = true;
+//        open("http://localhost:9999");
         $("[data-test-id=\"city\"] .input__control").setValue("Москва");
         $("[data-test-id=\"date\"] [placeholder='Дата встречи']").doubleClick().sendKeys(Keys.DELETE);
         LocalDate futureDay = today.plusDays(4);
@@ -97,8 +101,8 @@ public class OrderingCard {
 
     @Test
     void checkingEmptyDate() {
-        Configuration.holdBrowserOpen = true;
-        open("http://localhost:9999");
+//        Configuration.holdBrowserOpen = true;
+//        open("http://localhost:9999");
         $("[data-test-id=\"city\"] .input__control").setValue("Москва");
         $("[data-test-id=\"date\"] [placeholder='Дата встречи']").doubleClick().sendKeys(Keys.DELETE);
         LocalDate futureDay = today.plusDays(4);
