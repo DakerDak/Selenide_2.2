@@ -28,8 +28,6 @@ public class OrderingCard {
 
     @Test
     void validityOfTheForm() {
-//        Configuration.holdBrowserOpen = true;
-//        open("http://localhost:9999");
         $("[data-test-id=\"city\"] .input__control").setValue("Москва");
         $("[data-test-id=\"date\"] [placeholder='Дата встречи']").doubleClick().sendKeys(Keys.DELETE);
         LocalDate futureDay = today.plusDays(4);
@@ -43,8 +41,6 @@ public class OrderingCard {
 
     @Test
     void checkingTelaphoneNumber() {
-//        Configuration.holdBrowserOpen = true;
-//        open("http://localhost:9999");
         $("[data-test-id=\"city\"] .input__control").setValue("Москва");
         $("[data-test-id=\"date\"] [placeholder='Дата встречи']").doubleClick().sendKeys(Keys.DELETE);
         LocalDate futureDay = today.plusDays(4);
@@ -58,8 +54,6 @@ public class OrderingCard {
 
     @Test
     void checkingFIO() {
-//        Configuration.holdBrowserOpen = true;
-//        open("http://localhost:9999");
         $("[data-test-id=\"city\"] .input__control").setValue("Москва");
         $("[data-test-id=\"date\"] [placeholder='Дата встречи']").doubleClick().sendKeys(Keys.DELETE);
         LocalDate futureDay = today.plusDays(4);
@@ -73,8 +67,6 @@ public class OrderingCard {
 
     @Test
     void checkingCity() {
-//        Configuration.holdBrowserOpen = true;
-//        open("http://localhost:9999");
         $("[data-test-id=\"city\"] .input__control").setValue("Moskva");
         $("[data-test-id=\"date\"] [placeholder='Дата встречи']").doubleClick().sendKeys(Keys.DELETE);
         LocalDate futureDay = today.plusDays(4);
@@ -88,8 +80,6 @@ public class OrderingCard {
 
     @Test
     void checkingDate() {
-//        Configuration.holdBrowserOpen = true;
-//        open("http://localhost:9999");
         $("[data-test-id=\"city\"] .input__control").setValue("Москва");
         $("[data-test-id=\"date\"] [placeholder='Дата встречи']").doubleClick().sendKeys(Keys.DELETE);
         LocalDate futureDay = today.plusDays(4);
@@ -103,8 +93,6 @@ public class OrderingCard {
 
     @Test
     void checkingEmptyDate() {
-//        Configuration.holdBrowserOpen = true;
-//        open("http://localhost:9999");
         $("[data-test-id=\"city\"] .input__control").setValue("Москва");
         $("[data-test-id=\"date\"] [placeholder='Дата встречи']").doubleClick().sendKeys(Keys.DELETE);
         LocalDate futureDay = today.plusDays(4);
