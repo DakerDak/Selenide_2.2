@@ -18,12 +18,14 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class OrderingCard {
 
-    LocalDate today =  LocalDate.now();
+    LocalDate today = LocalDate.now();
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
-@BeforeEach
-public void openForm() {
-    open("http://localhost:9999");
-}
+
+    @BeforeEach
+    public void openForm() {
+        open("http://localhost:9999");
+    }
+
     @Test
     void validityOfTheForm() {
 //        Configuration.holdBrowserOpen = true;
